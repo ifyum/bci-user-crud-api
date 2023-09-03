@@ -2,7 +2,7 @@
 
 ## Consideraciones
 - Se utiliza openjdk 11
-- El aplicativo se configuro con maven desidi no usar una arquitectura hexagonal, ya que al no ser un requisito en el pedido preferi optar por una comun
+- La aplicación se configuró con Maven. No se utilizó una arquitectura hexagonal, ya que no era un requisito en el pedido. Se optó por una estructura común.
    - controller: En esta carpeta se encuentran los controladores de la aplicación, que se encargan de manejar las solicitudes HTTP y las respuestas. Los controladores definen las rutas y los puntos de entrada de la aplicación web. Aquí se establecen las interacciones con el cliente y se traducen las solicitudes en acciones específicas en la lógica de la aplicación.
    - entity: En la carpeta "entity" se definen las clases que representan las entidades del dominio. Estas clases suelen estar relacionadas con la base de datos y pueden utilizarse para mapear objetos a tablas de la base de datos o para definir las estructuras de datos principales de la aplicación.
    - model: La carpeta "model" se utiliza para definir objetos de modelo que se utilizan para transferir datos entre diferentes capas de la aplicación. Estos objetos suelen denominarse DTOs (Data Transfer Objects) y son útiles para encapsular datos y transferirlos de manera eficiente entre el controlador y la lógica de negocio, por ejemplo.
