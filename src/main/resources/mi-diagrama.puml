@@ -1,5 +1,4 @@
 @startuml
-!define class
 
 class <<Spring Controller>> {
   + List<Usuario> listarUsuarios()
