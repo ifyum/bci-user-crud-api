@@ -1,6 +1,7 @@
 @startuml
+!define class
 
-class <<Spring Controller>> {
+class SpringController {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -8,7 +9,7 @@ class <<Spring Controller>> {
   + void eliminarUsuario(int id)
 }
 
-class <<Spring Service>> {
+class SpringService {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -16,22 +17,22 @@ class <<Spring Service>> {
   + void eliminarUsuario(int id)
 }
 
-class <<Spring Repository>> {
+class SpringRepository {
   + List<Usuario> findAll()
   + Optional<Usuario> findById(int id)
   + void save(Usuario usuario)
   + void deleteById(int id)
 }
 
-class <<Database>> {
+class Database {
   Usuario
 }
 
-class <<Spring Boot Application>> {
+class SpringApplication {
   + main()
 }
 
-Controller ..> Service : Llama a
-Service ..> Repository : Utiliza
-Repository ..> Database : Accede a
+SpringController ..> SpringService : Llama a
+SpringService ..> SpringRepository : Utiliza
+SpringRepository ..> Database : Accede a
 @enduml
