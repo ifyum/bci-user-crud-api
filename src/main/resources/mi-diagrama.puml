@@ -25,6 +25,7 @@ class <<Spring Repository>> {
 
 class <<Database>> {
   Usuario
+  Phone
 }
 
 class <<Spring Boot Application>> {
