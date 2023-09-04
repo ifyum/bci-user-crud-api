@@ -22,6 +22,6 @@
 - La aplicación se configuró para utilizar h2 en formato embebido file y la ubicacion seria "C:\bcitest"
 - La aplicación se puedes ejecutar desde Intellij o cualquier ide compatible con spring boot, en su defecto desde consola se puede usar el comando "mvnw spring-boot:run" en la raiz del proyecto.
 - Para detener la aplicación en ejecución por consola, solo basta apretar "ctrl+c".
-
+## Diagrama
 ![Mi imagen](https://raw.githubusercontent.com/ifyum/bci-user-crud-api/main/src/main/resources/diagram.png)
 
