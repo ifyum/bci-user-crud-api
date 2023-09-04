@@ -16,24 +16,34 @@ class SpringService {
   + void eliminarUsuario(int id)
 }
 
-class "Spring Repository" {
+class "UserRepository" {
   + List<Usuario> findAll()
   + Optional<Usuario> findById(int id)
   + void save(Usuario usuario)
   + void deleteById(int id)
 }
 
-class "Database" {
+class Database {
   Usuario
   Phone
 }
 
-class "Spring Boot Application" {
-  + main()
+class PhoneService {
+  + List<PhoneVo> getPhones(UUID userId)
+}
+
+class PhoneRepository {
+  + List<Phone> findByUserId(UUID userId)
+}
+
+class PhoneController {
+  + List<PhoneVo> getPhones(UUID userId)
 }
 
 SpringController ..> SpringService : Llama a
-SpringService ..> "Spring Repository" : Utiliza
-"Spring Repository" ..> "Database" : Accede a
-
+SpringService ..> "UserRepository" : Utiliza
+"UserRepository" ..> Database : Accede a
+PhoneController --> PhoneService : Invoca
+PhoneService --> PhoneRepository : Utiliza
+"PhoneRepository" ..> Database : Accede a
 @enduml
