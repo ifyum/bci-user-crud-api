@@ -16,24 +16,24 @@ class SpringService {
   + void eliminarUsuario(int id)
 }
 
-class <<Spring Repository>> {
+class "Spring Repository" {
   + List<Usuario> findAll()
   + Optional<Usuario> findById(int id)
   + void save(Usuario usuario)
   + void deleteById(int id)
 }
 
-class <<Database>> {
+class "Database" {
   Usuario
   Phone
 }
 
-class <<Spring Boot Application>> {
+class "Spring Boot Application" {
   + main()
 }
 
-Controller ..> Service : Llama a
-Service ..> Repository : Utiliza
-Repository ..> Database : Accede a
+SpringController ..> SpringService : Llama a
+SpringService ..> "Spring Repository" : Utiliza
+"Spring Repository" ..> "Database" : Accede a
 
 @enduml
