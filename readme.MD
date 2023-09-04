@@ -13,7 +13,10 @@
 - se documenta con openApi libreria que tiene swagger que se puede visitar en http://localhost:8095/self-service/user-crud/swagger-ui/index.html#
 - La aplicación usa el puerto 8095
 - adicional agregue .github/workflows/build.yml por lo cual si lo suben a github correra el actions llamado build donde hara un build y lo test unitarios con esto pude ver que cada commit que hiciera mantuviera la integridad del microservicio
-
+- diagramas se encuentran en la caarpeta resource 
+   - formato PNG  https://github.com/ifyum/bci-user-crud-api/blob/main/src/main/resources/diagram.png
+   - formato SVG  https://github.com/ifyum/bci-user-crud-api/blob/main/src/main/resources/diagrama.svg
+   - formato PUML https://github.com/ifyum/bci-user-crud-api/blob/main/src/main/resources/mi-diagrama.puml
 ## Instrucciones
 - En la carpeta resources se encuentra el archivo .sql para la creación del modelo "db_creation.sql".
 - La aplicación se configuró para utilizar h2 en formato embebido file y la ubicacion seria "C:\bcitest"
