@@ -1,7 +1,7 @@
 @startuml
-!define ENTITY class
+!define class
 
-ENTITY <<Spring Controller>> {
+class <<Spring Controller>> {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -9,7 +9,7 @@ ENTITY <<Spring Controller>> {
   + void eliminarUsuario(int id)
 }
 
-ENTITY <<Spring Service>> {
+class <<Spring Service>> {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -17,18 +17,18 @@ ENTITY <<Spring Service>> {
   + void eliminarUsuario(int id)
 }
 
-ENTITY <<Spring Repository>> {
+class <<Spring Repository>> {
   + List<Usuario> findAll()
   + Optional<Usuario> findById(int id)
   + void save(Usuario usuario)
   + void deleteById(int id)
 }
 
-ENTITY <<Database>> {
+class <<Database>> {
   Usuario
 }
 
-@Entity <<Spring Boot Application>> {
+class <<Spring Boot Application>> {
   + main()
 }
 
