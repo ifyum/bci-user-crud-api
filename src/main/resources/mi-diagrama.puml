@@ -1,6 +1,6 @@
 @startuml
 
-class <<Spring Controller>> {
+class SpringController {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -8,7 +8,7 @@ class <<Spring Controller>> {
   + void eliminarUsuario(int id)
 }
 
-class <<Spring Service>> {
+class SpringService {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
