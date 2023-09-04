@@ -1,7 +1,7 @@
 @startuml
-!define class
+!define ENTITY class
 
-class SpringController {
+ENTITY <<Spring Controller>> {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -9,7 +9,7 @@ class SpringController {
   + void eliminarUsuario(int id)
 }
 
-class SpringService {
+ENTITY <<Spring Service>> {
   + List<Usuario> listarUsuarios()
   + Usuario obtenerUsuario(int id)
   + void crearUsuario(Usuario usuario)
@@ -17,22 +17,22 @@ class SpringService {
   + void eliminarUsuario(int id)
 }
 
-class SpringRepository {
+ENTITY <<Spring Repository>> {
   + List<Usuario> findAll()
   + Optional<Usuario> findById(int id)
   + void save(Usuario usuario)
   + void deleteById(int id)
 }
 
-class Database {
+ENTITY <<Database>> {
   Usuario
 }
 
-class SpringApplication {
+ENTITY <<Spring Boot Application>> {
   + main()
 }
 
-SpringController ..> SpringService : Llama a
-SpringService ..> SpringRepository : Utiliza
-SpringRepository ..> Database : Accede a
+Controller ..> Service : Llama a
+Service ..> Repository : Utiliza
+Repository ..> Database : Accede a
 @enduml
